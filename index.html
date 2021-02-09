@@ -20,9 +20,11 @@
                         <a href="contact_us.html">Contact Us</a>
                     </li>
                     <script>
-                        adminPageLink(userName);
                         var userName = getUserName();
-                        document.write('<span class="user_name_label">hello ' + userName + '</span>');
+                        adminPageLink(userName);
+                        if(userName != null){
+                            document.write('<span class="user_name_label">hello ' + userName + '</span>');
+                        }
                     </script>
                 </ul>
             </nav>
@@ -38,17 +40,17 @@
             </div>
             <div class="botom_section">
                 <div class="block-item">
-                    <img src="assets/images/mansaf.jpg" alt="mansaf1" />
+                    <img onclick="changeImage(2)" src="assets/images/mansaf2.jpg" alt="mansaf1" />
                     <p>Karak's mansaf with 1kg beef meat. 20$</p>
                     <a href="" >Order now</a>
                 </div>
                 <div class="block-item">
-                    <img src="assets/images/mansaf.jpg" alt="mansaf1" />
+                    <img onclick="changeImage(3)" src="assets/images/mansaf3.jpg" alt="mansaf1" />
                     <p>Karak's mansaf with 2kg beef meat. 40$</p>
                     <a href="" >Order now</a>
                 </div>
                 <div class="block-item">
-                    <img src="assets/images/mansaf.jpg" alt="mansaf1" />
+                    <img onclick="changeImage(4)" src="assets/images/mansaf4.jpg" alt="mansaf1" />
                     <p>Karak's mansaf with 3kg beef meat. 50$</p>
                     <a href="" >Order now</a>
                 </div>
