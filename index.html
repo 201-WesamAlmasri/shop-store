@@ -4,21 +4,11 @@
         <title>Mansaf Store</title>
     </head>
     <body>
+        <script src="assets/js/main.js"></script>
         <header>
             <script>
-                var admin;
-                var userName = prompt("Please enter your name");
-
-                if(userName != null){
-                    if(userName === 'wesam'){
-                        admin = true;
-                    } else {
-                        admin = false;
-                    }
-                    document.write("hello " + userName);
-                }
-                console.log("userName: " + userName);
-                console.log("admin: " + admin);
+                var userName = getUserName();
+                document.write("hello " + userName);
             </script>
             <nav>
                 <ul>
@@ -32,9 +22,7 @@
                         <a href="contact_us.html">Contact Us</a>
                     </li>
                     <script>
-                        if(admin){
-                        document.write('<li><a href="admin.html">Admin Page</a></li>')
-                    }
+                        adminPageLink(userName);
                     </script>
                 </ul>
             </nav>
@@ -68,6 +56,5 @@
         <footer>
             &copy; Mansaf store from ASAC
         </footer>
-        <script src="assets/js/main.js"></script>
     </body>
 </html> 
